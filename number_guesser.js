@@ -4,7 +4,6 @@ var numAndCompDiff = function(x, y) {
 };
 
 function setLimits(){
-  // debugger;
   var minLimit = $('#minLimit').val();
   var maxLimit = $('#maxLimit').val();
   var min = parseInt(minLimit)
@@ -29,11 +28,7 @@ var highOrLow = function(compNum) {
   // Input field to enter number
   var enterNum = $("#enterNum").val();
   var enter = parseInt(enterNum)
-
-  // const compNum = Math.floor((Math.random() * (max - min + 1)) + min);
-  // debugger;
   var diffTotal = numAndCompDiff(enter, compNum);
-// debugger;
 
  if (isNaN(enter) || enter === "") {
     $(".gameStatusAlert").html("You Must Enter\n a Number to Start")
@@ -61,13 +56,10 @@ $("#resetBtn").click(function(){
 
   $("#setLimitsBtn").click(function(){
     event.preventDefault();
-    // debugger;
     const compNum = setLimits()
   $("#enterBtn").click(function() {
     $("#resetBtn").prop("disabled", false);
     $("#clearBtn").prop("disabled", false);
-    // $("#maxLimit").show();
-    // $("#minLimit").show();
     $(".gameStatusAlert").show();
     $(".previousGuess").show();
     $(".previousGuessWords").show();

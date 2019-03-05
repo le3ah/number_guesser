@@ -49,13 +49,9 @@ form {
 }
 .guesser:hover{
   background: #EB008B;
-  /* color: #FFFFFF;
-  font-size: 30px; */
 }
 .guesser:disabled{
   background: #D0D2D3;
-  /* color: #FFFFFF;
-  font-size: 30px; */
 }
 .clear {
   border-radius: 25px;
@@ -69,13 +65,9 @@ form {
 }
 .clear:hover{
   background: #EB008B;
-  /* color: #FFFFFF;
-  font-size: 30px; */
 }
 .clear:disabled{
   background: #D0D2D3;
-  /* color: #FFFFFF;
-  font-size: 30px; */
 }
 .reset {
   border-radius: 25px;
@@ -90,14 +82,11 @@ form {
 }
 .reset:hover{
   background: #EB008B;
-  /* color: #FFFFFF;
-  font-size: 30px; */
 }
 .reset:disabled{
   background: #D0D2D3;
-  /* color: #FFFFFF;
-  font-size: 30px; */
 }
+
 #enterNum {
   font-size: 25px;
   height: 30px;
