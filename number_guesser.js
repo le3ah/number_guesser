@@ -16,6 +16,12 @@ var highOrLow = function() {
 // debugger;
   if (isNaN(enterNum) || enterNum === "") {
     $(".gameStatusAlert").html("You Must Enter\n a Number to Start")
+    $(".previousGuessWords").html("");
+    $(".previousGuess").html("");
+  } else if (enterNum > 100 || enterNum < 0) {
+    $(".gameStatusAlert").html("Your guess must be between\n 0 and 100")
+    $(".previousGuessWords").html("Your last guess was");
+    $(".previousGuess").html(enterNum);
   } else if (diffTotal > 0) {
     $(".gameStatusAlert").html("That is too high");
     $(".previousGuessWords").html("Your last guess was");

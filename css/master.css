@@ -1,5 +1,9 @@
 body{
 font-family: Open Sans;
+text-align: center;
+}
+form {
+  display: inline-block;
 }
 .container {
   display: flex;
@@ -37,76 +41,77 @@ font-family: Open Sans;
   border-radius: 25px;
   padding-top: 5px;
   padding-bottom: 5px;
-  padding-left: 60px;
-  padding-right: 60px;
+  padding-left: 80px;
+  padding-right: 80px;
   background: #929497;
   color: #FFFFFF;
   font-size: 30px;
 }
 .guesser:hover{
   background: #EB008B;
-  color: #FFFFFF;
-  font-size: 30px;
+  /* color: #FFFFFF;
+  font-size: 30px; */
 }
 .guesser:disabled{
   background: #D0D2D3;
-  color: #FFFFFF;
-  font-size: 30px;
+  /* color: #FFFFFF;
+  font-size: 30px; */
 }
 .clear {
   border-radius: 25px;
   padding-top: 5px;
   padding-bottom: 5px;
-  padding-left: 60px;
-  padding-right: 60px;
+  padding-left: 80px;
+  padding-right: 80px;
   background: #929497;
   color: #FFFFFF;
   font-size: 30px;
 }
 .clear:hover{
   background: #EB008B;
-  color: #FFFFFF;
-  font-size: 30px;
+  /* color: #FFFFFF;
+  font-size: 30px; */
 }
 .clear:disabled{
   background: #D0D2D3;
-  color: #FFFFFF;
-  font-size: 30px;
+  /* color: #FFFFFF;
+  font-size: 30px; */
 }
 .reset {
   border-radius: 25px;
   padding-top: 5px;
   padding-bottom: 5px;
-  padding-left: 60px;
-  padding-right: 60px;
+  padding-left: 80px;
+  padding-right: 80px;
   background: #929497;
   color: #FFFFFF;
-  font-size: 30px;
+  font-size: 25px;
 }
 .reset:hover{
   background: #EB008B;
-  color: #FFFFFF;
-  font-size: 30px;
+  /* color: #FFFFFF;
+  font-size: 30px; */
 }
 .reset:disabled{
   background: #D0D2D3;
-  color: #FFFFFF;
-  font-size: 30px;
+  /* color: #FFFFFF;
+  font-size: 30px; */
 }
-.enterNum {
-  font-size: 30px;
+#enterNum {
+  font-size: 25px;
+  height: 30px;
 }
 .gameStatusAlert {
   margin-top: 10px;
   color: #404041;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 .previousGuess {
   color: #EB008B;
   font-size: 100px;
 }
 .previousGuessWords {
-  margin-top: 20px;
+  margin-top: 25px;
   color: #404041;
 }
 .initial-select {
