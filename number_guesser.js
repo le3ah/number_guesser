@@ -9,6 +9,7 @@ var setLimits = $(".setLimits-params").val();
 var highOrLow = function() {
   // Input field to enter number
   var enterNum = $("#enterNum").val();
+  var enter = parseInt(enterNum)
   var setLimits = $(".setLimits-params").val();
 
   var minLimit = $('#minLimit').val();
@@ -18,7 +19,7 @@ var highOrLow = function() {
 
   var compNum = Math.floor((Math.random() * (max - min + 1)) + min);
   // debugger;
-  var diffTotal = numAndCompDiff(enterNum, compNum);
+  var diffTotal = numAndCompDiff(enter, compNum);
 // debugger;
   if (isNaN(max) || max === ""){
     $(".gameStatusAlert").html("You Must Enter\n a Maximum Limit to Start")
@@ -28,25 +29,25 @@ var highOrLow = function() {
     $(".gameStatusAlert").html("You Must Enter\n a Minimum Limit to Start")
     $(".previousGuessWords").html("");
     $(".previousGuess").html("");
-  } else if (isNaN(enterNum) || enterNum === "") {
+  } else if (isNaN(enter) || enter === "") {
     $(".gameStatusAlert").html("You Must Enter\n a Number to Start")
     $(".previousGuessWords").html("");
     $(".previousGuess").html("");
-  } else if (enterNum > max || enterNum < min) {
+  } else if (enter > max || enter < min) {
     $(".gameStatusAlert").html("Your guess must be between\n the max and min limits")
     $(".previousGuessWords").html("Your last guess was");
-    $(".previousGuess").html(enterNum);
+    $(".previousGuess").html(enter);
   } else if (diffTotal > 0) {
     $(".gameStatusAlert").html("That is too high");
     $(".previousGuessWords").html("Your last guess was");
-    $(".previousGuess").html(enterNum);
+    $(".previousGuess").html(enter);
   } else if (diffTotal < 0) {
     $(".gameStatusAlert").html("That is too low");
     $(".previousGuessWords").html("Your last guess was");
-    $(".previousGuess").html(enterNum);
+    $(".previousGuess").html(enter);
   } else {
     $(".gameStatusAlert").html("Boom!")
-    $(".previousGuess").html(enterNum);
+    $(".previousGuess").html(enter);
     $("#resetBtn").css("display", "block");
   }
 }
@@ -57,7 +58,7 @@ $("#resetBtn").click(function(){
 });
 
 $(document).ready(function(){
-  $("#enterBtn").click(function(enterNum) {
+  $("#enterBtn").click(function(enter) {
     $("#resetBtn").prop("disabled", false);
     $("#clearBtn").prop("disabled", false);
     $("#maxLimit").show();

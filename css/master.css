@@ -86,6 +86,7 @@ form {
   background: #929497;
   color: #FFFFFF;
   font-size: 25px;
+  width: 100%;
 }
 .reset:hover{
   background: #EB008B;
@@ -116,4 +117,7 @@ form {
 }
 .initial-select {
   justify-content: space-between;
+}
+.setLimits {
+  margin-top: 20px;
 }
