@@ -1,8 +1,114 @@
+body{
+font-family: Open Sans;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.enter-num {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
 .header {
   background: #404041;
-  text-align: center;
+  font-size: 45px;
+  display: inline-flex;
+  width: 100%;
+  justify-content: center;
 }
 
-#resetBtn {
-  display: none;
+.h1-number {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #ED458B;
+  margin-right: 10px;
+  font-weight: 700;
+}
+
+.h1-guesser {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #E6E7E8;
+  font-weight: 300;
+}
+
+.guesser {
+  border-radius: 25px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 60px;
+  padding-right: 60px;
+  background: #929497;
+  color: #FFFFFF;
+  font-size: 30px;
+}
+.guesser:hover{
+  background: #EB008B;
+  color: #FFFFFF;
+  font-size: 30px;
+}
+.guesser:disabled{
+  background: #D0D2D3;
+  color: #FFFFFF;
+  font-size: 30px;
+}
+.clear {
+  border-radius: 25px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 60px;
+  padding-right: 60px;
+  background: #929497;
+  color: #FFFFFF;
+  font-size: 30px;
+}
+.clear:hover{
+  background: #EB008B;
+  color: #FFFFFF;
+  font-size: 30px;
+}
+.clear:disabled{
+  background: #D0D2D3;
+  color: #FFFFFF;
+  font-size: 30px;
+}
+.reset {
+  border-radius: 25px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 60px;
+  padding-right: 60px;
+  background: #929497;
+  color: #FFFFFF;
+  font-size: 30px;
+}
+.reset:hover{
+  background: #EB008B;
+  color: #FFFFFF;
+  font-size: 30px;
+}
+.reset:disabled{
+  background: #D0D2D3;
+  color: #FFFFFF;
+  font-size: 30px;
+}
+.enterNum {
+  font-size: 30px;
+}
+.gameStatusAlert {
+  margin-top: 10px;
+  color: #404041;
+  margin-bottom: 20px;
+}
+.previousGuess {
+  color: #EB008B;
+  font-size: 100px;
+}
+.previousGuessWords {
+  margin-top: 20px;
+  color: #404041;
+}
+.initial-select {
+  justify-content: space-between;
 }

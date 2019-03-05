@@ -18,10 +18,12 @@ var highOrLow = function() {
     $(".gameStatusAlert").html("You Must Enter\n a Number to Start")
   } else if (diffTotal > 0) {
     $(".gameStatusAlert").html("That is too high");
+    $(".previousGuessWords").html("Your last guess was");
     $(".previousGuess").html(enterNum);
     // $(".attempts").html(numAttempts + " of 5 ");
   } else if (diffTotal < 0) {
     $(".gameStatusAlert").html("That is too low");
+    $(".previousGuessWords").html("Your last guess was");
     $(".previousGuess").html(enterNum);
     // $(".attempts").html(numAttempts + " of 5 ");
   } else {
@@ -39,11 +41,13 @@ $("#resetBtn").click(function(){
 
 $(document).ready(function(){
   $("#enterBtn").click(function(enterNum) {
-    event.preventDefault();
-    highOrLow();
-    $("#resetBtn").show();
+    $("#resetBtn").prop("disabled", false);
+    $("#clearBtn").prop("disabled", false);
     $(".gameStatusAlert").show();
     $(".previousGuess").show();
+    $(".previousGuessWords").show();
+    event.preventDefault();
+    highOrLow();
   });
   $("#resetBtn").click(function(){
     location.reload();

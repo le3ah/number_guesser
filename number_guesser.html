@@ -5,7 +5,9 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="path/to/your/jquery.min.js"><\/script>')</script>
     <title>Number Guesser</title>
+    <link rel="stylesheet" type="text/css" href="./css/reset.css">
     <link rel="stylesheet" type="text/css" href="./css/master.css">
+    <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
 </head>
 <body>
     <!--  <a href="http://jquery.com/">jQuery</a>  -->
@@ -14,21 +16,26 @@
     // Your code goes here.
     </script>
     <div class="header">
-      <h1><strong>Number</strong> Guesser</h1>
+      <h1 class="h1-number">Number</h1><h1 class="h1-guesser">Guesser</h1>
     </div>
     <div class="container">
       <div class="row">
         <div class="game-wrap">
           <form name="myForm">
-            <input type="text" name="form-control input-lg" value="Enter your guess" id="enterNum">
-            <input class="guesser" type="submit" value="Guess" id="enterBtn">
-            <input class="clear" type="reset" value="Clear" id="clearBtn">
-            <input class="reset" type="reset" value="Reset" id="resetBtn">
-          </form>
-        </div>
-      </div>
-    </div>
-    <h3 class="gameStatusAlert"></h3>
-    <h3 class="previousGuess"></h3>
+            <div class="enter-num">
+              <input type="text" name="form-control input-lg" placeholder="Enter your guess" id="enterNum">
+            </div>
+            <div class="initial-select">
+              <input class="guesser" type="submit" value="Guess" id="enterBtn" >
+              <input class="clear" type="reset" value="Clear" id="clearBtn" disabled>
+            </div>
+      <h3 class="previousGuessWords"></h3>
+      <h3 class="previousGuess"></h3>
+      <h3 class="gameStatusAlert"></h3>
+  <input class="reset" type="reset" value="Reset" id="resetBtn" disabled>
+</div>
+</div>
+</form>
+</div>
 </body>
 </html>
