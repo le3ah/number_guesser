@@ -17,6 +17,10 @@ function setLimits(){
     $(".gameStatusAlert").html("You Must Enter\n a Minimum Limit to Start")
     $(".previousGuessWords").html("");
     $(".previousGuess").html("");
+  } else if (max === "" || min === ""){
+    $(".gameStatusAlert").html("You Must Enter\n Limits to Start")
+    $(".previousGuessWords").html("");
+    $(".previousGuess").html("");
   } else {
     $(".limitAlert").html(`Your range is ${min} to ${max}`)
     var compNum = Math.floor((Math.random() * (max - min + 1)) + min);
