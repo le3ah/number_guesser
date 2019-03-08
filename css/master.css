@@ -69,7 +69,7 @@ form {
 .clear:disabled{
   background: #D0D2D3;
 }
-.reset {
+.reset, #setLimitsBtn {
   border-radius: 25px;
   padding-top: 5px;
   padding-bottom: 5px;
@@ -108,7 +108,8 @@ form {
   justify-content: space-between;
 }
 .setLimits {
-  margin-top: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 .limitAlert {
   margin-top: 20px;
