@@ -47,20 +47,30 @@ var highOrLow = function(compNum) {
     $(".previousGuessWords").html("Your last guess was");
     $(".previousGuess").html(enter);
   } else {
-    $(".gameStatusAlert").html("Boom!")
+    $(".gameStatusAlert").html("Boom! Your new range will be automatically reset")
     $(".previousGuess").html(enter);
-    $("#resetBtn").css("display", "block");
+    autoLimitReset();
   }
-}
+};
+
+function autoLimitReset() {
+  var resetMin = parseInt($("#minLimit").val()) - 10;
+  var resetMax = parseInt($("#maxLimit").val()) + 10;
+  $("#minLimit").val(resetMin.toString())
+  $("#maxLimit").val(resetMax.toString())
+  $(".limitAlert").html(`Your new range is ${resetMin} to ${resetMax}`)
+  var compNum = Math.floor((Math.random() * (resetMax - resetMin + 1)) + resetMin);
+  $("#enterNum").val("");
+};
 
 $("#resetBtn").click(function(){
   $(".gameStatusAlert,#resetBtn").hide();
   $("#enterNum").val("");
 });
 
-  $("#setLimitsBtn").click(function(){
-    event.preventDefault();
-    const compNum = setLimits()
+$("#setLimitsBtn").click(function(){
+  event.preventDefault();
+  compNum = setLimits();
   $("#enterBtn").click(function() {
     $("#resetBtn").prop("disabled", false);
     $("#clearBtn").prop("disabled", false);
